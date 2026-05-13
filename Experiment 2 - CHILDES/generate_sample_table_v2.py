@@ -14,7 +14,9 @@ AGE_GROUPS = [
     (24, 36, '24-36'),
     (36, 48, '36-48'),
     (48, 60, '48-60'),
-    (60, 100, '60-100')
+    (60, 72, '60-72'),
+    (72, 84, '72-84'),
+    (84, 96, '84-96')
 ]
 
 def get_good_samples(df, age_min, age_max, n=5, seed=42):
@@ -66,8 +68,8 @@ def create_table():
     samples_df = pd.DataFrame(all_samples)
 
     # Save as CSV
-    samples_df.to_csv('output/age_groups_complete/sample_utterances_v2.csv', index=False)
-    print("Saved to output/age_groups_complete/sample_utterances_v2.csv")
+    samples_df.to_csv('output/age_groups_complete_96mos/sample_utterances_v2.csv', index=False)
+    print("Saved to output/age_groups_complete_96mos/sample_utterances_v2.csv")
 
     # Create modern, professional figure
     fig, ax = plt.subplots(figsize=(14, 9))
@@ -131,9 +133,9 @@ def create_table():
              ha='center', fontsize=12, color='#7F8C8D', style='italic')
 
     plt.tight_layout(rect=[0, 0, 1, 0.88])
-    plt.savefig('output/age_groups_complete/sample_utterances_table_v2.png',
+    plt.savefig('output/age_groups_complete_96mos/sample_utterances_table_v2.png',
                 dpi=300, bbox_inches='tight', facecolor='white', edgecolor='none')
-    print("Saved to output/age_groups_complete/sample_utterances_table_v2.png")
+    print("Saved to output/age_groups_complete_96mos/sample_utterances_table_v2.png")
     plt.close()
 
     # Print text version
