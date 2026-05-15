@@ -101,6 +101,11 @@ outfile <- paste0("rdata/utterances/childes_full_utterances_", timestamp, ".csv"
 write.csv(full_utterances, outfile, row.names = FALSE)
 cat("Full utterances saved to:", outfile, "\n")
 
+# Also save a copy at the path the Python pipeline reads from
+dir.create("data", showWarnings = FALSE, recursive = TRUE)
+file.copy(outfile, "data/childes_utterances.csv", overwrite = TRUE)
+cat("Also copied to: data/childes_utterances.csv\n")
+
 # Preview first few utterances
 cat("\nFirst 10 utterances:\n")
 print(head(full_utterances$full_utterance, 10))
