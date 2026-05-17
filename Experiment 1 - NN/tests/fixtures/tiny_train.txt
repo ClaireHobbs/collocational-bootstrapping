@@ -1,0 +1,40 @@
+the singer sings
+the dancer dances
+the runner runs
+the swimmer swims
+the jumper jumps
+the walker walks
+the talker talks
+the writer writes
+the singers sing
+the dancers dance
+the runners run
+the swimmers swim
+the jumpers jump
+the walkers walk
+the talkers talk
+the writers write
+the singer by the dancer sings
+the runner near the swimmer runs
+the jumper by the walker jumps
+the talker near the writer talks
+by the dancer the singer sings
+near the swimmer the runner runs
+by the walker the jumper jumps
+near the writer the talker talks
+the singer by the dancer near the runner sings
+the swimmer by the jumper near the walker swims
+the talker by the writer near the singer talks
+the dancer by the runner near the swimmer dances
+the singers by the dancers sing
+the runners near the swimmers run
+the jumpers by the walkers jump
+the talkers near the writers talk
+by the dancers the singers sing
+near the swimmers the runners run
+by the walkers the jumpers jump
+near the writers the talkers talk
+the singers by the dancers near the runners sing
+the swimmers by the jumpers near the walkers swim
+the talkers by the writers near the singers talk
+the dancers by the runners near the swimmers dance

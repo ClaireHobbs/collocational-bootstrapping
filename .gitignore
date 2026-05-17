@@ -1,0 +1,18 @@
+.DS_Store
+.Rhistory
+Experiment 2 - CHILDES/analyze_age_outliers.py
+Experiment 2 - CHILDES/analyze_childes_utterances.py
+Experiment 2 - CHILDES/data/
+Experiment 2 - CHILDES/download_childes.py
+Experiment 2 - CHILDES/generate_sample_table.py
+Experiment 2 - CHILDES/rank_averages_0-12mo.csv
+Experiment 2 - CHILDES/rank_averages_12-24mo.csv
+Experiment 2 - CHILDES/rank_averages_24-36mo.csv
+Experiment 2 - CHILDES/rank_averages_36-48mo.csv
+Experiment 2 - CHILDES/rank_averages_48-60mo.csv
+Experiment 2 - CHILDES/rank_averages_60-72mo.csv
+Experiment 2 - CHILDES/rank_averages_72-84mo.csv
+Experiment 2 - CHILDES/rank_averages_84-96mo.csv
+Experiment 2 - CHILDES/rank_averages_96mos.csv
+Experiment 2 - CHILDES/regenerate_plot.py
+Experiment 2 - CHILDES/run_all.py

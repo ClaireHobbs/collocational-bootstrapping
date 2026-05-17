@@ -1,0 +1,14 @@
+{
+  "0.0/seen_match": 1.0,
+  "0.0/seen_mismatch": 0.043,
+  "0.0/unseen_match": 1.0,
+  "0.0/unseen_mismatch": 0.052000000000000005,
+  "1.4/seen_match": 0.998,
+  "1.4/seen_mismatch": 0.9415,
+  "1.4/unseen_match": 0.9840000000000001,
+  "1.4/unseen_mismatch": 0.8615,
+  "3.0/seen_match": 0.9940000000000001,
+  "3.0/seen_mismatch": 0.9915,
+  "3.0/unseen_match": 0.8,
+  "3.0/unseen_mismatch": 0.6805
+}

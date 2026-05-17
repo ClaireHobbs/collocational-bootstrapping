@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imagining-syntax"
+version = "0.1.0"
+description = "Computational linguistics research: how transformers learn subject-verb agreement under Zipfian-distributed synthetic sentences."
+requires-python = ">=3.10"
+dependencies = [
+    "torch==2.7.1",
+    "numpy==2.3.1",
+    "scikit-learn==1.7.0",
+    "scipy==1.16.0",
+    "PyYAML==6.0.2",
+    "tqdm==4.67.1",
+    "pandas==2.3.0",
+    "matplotlib==3.10.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.5",
+    "pytest-cov==6.0.0",
+]
+
+[project.scripts]
+imsyn = "imagining_syntax.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-m", "not slow and not science"]
+markers = [
+    "slow: tests over 30 seconds; require subprocess-heavy runners",
+    "science: paper-reproduction tests (15-25 min); locks in published Fig 2 result",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
