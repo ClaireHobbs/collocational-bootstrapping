@@ -157,10 +157,15 @@ def calculate_rank_proportions(pairs, top_verbs):
 
     # Calculate average proportion by rank (across all verbs)
     rank_averages = combined_df.groupby('rank').agg(
-        average_proportion=('proportion', 'mean'),
+        proportion_sum=('proportion', 'sum'),
         num_verbs=('proportion', 'count'),
         sd_proportion=('proportion', 'std')
     ).reset_index()
+
+    # Missing ranks contribute zero across all selected verbs (paper Eq. 2).
+    rank_averages['average_proportion'] = rank_averages['proportion_sum'] / len(top_verbs)
+    # num_verbs and sd_proportion describe the observed ranks.
+    rank_averages = rank_averages[['rank', 'average_proportion', 'num_verbs', 'sd_proportion']]
 
     print(f"Rank averages calculated for {len(rank_averages)} ranks")
 

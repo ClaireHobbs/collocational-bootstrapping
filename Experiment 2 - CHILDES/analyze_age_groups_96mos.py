@@ -145,10 +145,15 @@ def calculate_rank_proportions(pairs, top_verbs):
     combined_df = pd.DataFrame(all_ranked_data)
 
     rank_averages = combined_df.groupby('rank').agg(
-        average_proportion=('proportion', 'mean'),
+        proportion_sum=('proportion', 'sum'),
         num_verbs=('proportion', 'count'),
         sd_proportion=('proportion', 'std')
     ).reset_index()
+
+    # Missing ranks contribute zero across all selected verbs (paper Eq. 2).
+    rank_averages['average_proportion'] = rank_averages['proportion_sum'] / len(top_verbs)
+    # num_verbs and sd_proportion describe the observed ranks.
+    rank_averages = rank_averages[['rank', 'average_proportion', 'num_verbs', 'sd_proportion']]
 
     return rank_averages, combined_df
 
@@ -322,7 +327,7 @@ def plot_z_by_age(results, output_dir):
 
     # Reference lines
     ax.axhline(y=1.43, color='#756bb1', linestyle=':', linewidth=1.5, alpha=0.8)
-    ax.text(len(x) - 0.5, 1.435, r'Overall $\alpha$ = 1.43',
+    ax.text(len(x) - 0.5, 1.435, r'Published overall $\alpha$ = 1.43',
             ha='right', va='bottom', fontsize=10, color='#756bb1')
 
     ax.axhline(y=1.4, color='#de2d26', linestyle='--', linewidth=1.5, alpha=0.8)

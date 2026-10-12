@@ -28,8 +28,10 @@ distribution of subject-verb pairs in child-directed speech, using data from
 the CHILDES database. Runs the analysis once on the full dataset (target
 child ages 0–96 months) and once per age group (eight 12-month bins).
 
-Key results: overall α = 1.43; α decreases with child age from 1.46 (0–12 mo)
-to 1.25 (84–96 mo).
+Published results: overall α = 1.43; α decreases from 1.46 (0–12 mo) to
+1.25 (84–96 mo). Correcting the rank-average denominator on the same data
+gives overall α = 1.48 and endpoints 1.58 and 1.52; see the
+[before-and-after results](./Experiment%202%20-%20CHILDES/README.md#rank-average-denominator-correction).
 
 ## How the experiments connect
 
